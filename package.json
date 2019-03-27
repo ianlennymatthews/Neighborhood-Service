@@ -1,0 +1,23 @@
+{
+  "name": "neighborhood-service",
+  "version": "1.0.0",
+  "description": "neighborhood service module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hack-reactor-front-end-abrm/Neighborhood-Service.git"
+  },
+  "author": "Andrew Schuessler",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hack-reactor-front-end-abrm/Neighborhood-Service/issues"
+  },
+  "homepage": "https://github.com/hack-reactor-front-end-abrm/Neighborhood-Service#readme",
+  "dependencies": {
+    "sqlite": "^3.0.3",
+    "sqlite3": "^4.0.6"
+  }
+}
