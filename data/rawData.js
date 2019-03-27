@@ -902,6 +902,16 @@ var rawData = [
 }
 ]
 
+var addUniqueId = () => {
+    var id = 1;
+    for (var i = 0; i < rawData.length; i++) {
+        rawData[i].uniqueId = id;
+        id += 1;
+    }
+}
+
+addUniqueId();
+
 module.exports = rawData;
 
 

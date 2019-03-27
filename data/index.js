@@ -12,10 +12,9 @@ let db = new sqlite3.Database('/Users/andrewschuessler/Desktop/hackReactorProjec
 
 db.serialize(function() {
    
-    // var stmt = db.prepare("INSERT INTO regoProperties VALUES (price, beds, baths, sqft, address, latitude, longitude)");
-    var stmt = db.prepare("INSERT INTO regoProperties VALUES (?, ?, ?, ?, ?, ?, ?)");
+    var stmt = db.prepare("INSERT INTO regoProperties VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
     for (var i = 0; i < data.length; i++) {
-        stmt.run(data[i].price, data[i].beds, data[i].baths, data[i].sqft, data[i].address, data[i].latitude, data[i].longitude);
+        stmt.run(data[i].price, data[i].beds, data[i].baths, data[i].sqft, data[i].address, data[i].latitude, data[i].longitude, data[i].uniqueId);
     }
     stmt.finalize();
    
