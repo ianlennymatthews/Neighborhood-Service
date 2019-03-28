@@ -2,20 +2,23 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
 var axios = require('axios');
-const db = require('../db/sql');
+const Models = require('./Models.js');
 
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/../client/dist'));
 
-// app.get('/api/items', (req, res) => {
+app.get('/', (req, res) => {
+    Models.retrieveAll(req, res);
+})
 
-// })
+app.get('/:id', (req, res) => {
+    // grab the specific item in the req.body param
+    // res.send the relevant dataset 
 
-// .then()
-// .catch( (err) => console.log(err))
+})
 
 
 
-app.listen(3000, function() {
-    console.log('listening on port 3000!');
+app.listen(3007, function() {
+    console.log('listening on port 3007!');
 });
