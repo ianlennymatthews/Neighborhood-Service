@@ -7,16 +7,13 @@ const Models = require('./Models.js');
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/../client/dist'));
 
-app.get('/', (req, res) => {
+app.get('/items', (req, res) => {
     Models.retrieveAll(req, res);
 })
 
-app.get('/:id', (req, res) => {
-    // grab the specific item in the req.body param
-    // res.send the relevant dataset 
-
+app.get('/items/:id', (req, res) => {
+    Models.retrieveOne(req, res);
 })
-
 
 
 app.listen(3007, function() {

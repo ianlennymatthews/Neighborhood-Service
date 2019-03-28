@@ -54,9 +54,10 @@ db.serialize(() => {
 
 db.close((err) => {
     if (err) {
-    return console.error(err.message);
-    }
-    console.log('Closed the database connection.');
+        return console.error(err.message);
+    } else {
+        console.log('Closed the database connection.');
+    } 
 });
 
 module.exports = db;
