@@ -4,7 +4,9 @@
   "description": "neighborhood service module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "react-dev": "webpack -d --watch",
+    "server-dev": "nodemon server/index.js"
   },
   "repository": {
     "type": "git",
@@ -16,10 +18,23 @@
     "url": "https://github.com/hack-reactor-front-end-abrm/Neighborhood-Service/issues"
   },
   "homepage": "https://github.com/hack-reactor-front-end-abrm/Neighborhood-Service#readme",
+  "devDependencies": {
+    "babel-core": "^6.23.3",
+    "babel-loader": "^7.1.5",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "webpack": "^4.17.1",
+    "webpack-cli": "^3.1.0"
+  },
   "dependencies": {
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
+    "nodemon": "^1.18.10",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "sqlite": "^3.0.3",
     "sqlite3": "^4.0.6"
   }
