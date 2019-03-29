@@ -25,7 +25,13 @@ class Map extends React.Component {
           // Important! Always set the container height explicitly
           <div style={{ height: '50vh', width: '50%' }}>
             <GoogleMapReact bootstrapURLKeys={{ key: config.GOOGLE_API_KEY }} defaultCenter={this.props.center} defaultZoom={this.props.zoom} >
-            <MapProperty lat={40.6782} lng={-73.9442}/>
+            {this.props.properties.map(property => {
+                return (
+                    <MapProperty lat={property.latitude} lng={property.longitude}/>
+                )
+                
+            })}
+            
             </GoogleMapReact>
           </div>
         );
