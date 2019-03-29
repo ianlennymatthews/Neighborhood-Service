@@ -12,10 +12,10 @@ class Map extends React.Component {
 
     static defaultProps = {
         center: {
-          lat: 40.6782,
-          lng: -73.9442
+          lat: 40.72,
+          lng: -73.86
         },
-        zoom: 11
+        zoom: 14
     };
 
 
@@ -27,7 +27,7 @@ class Map extends React.Component {
             <GoogleMapReact bootstrapURLKeys={{ key: config.GOOGLE_API_KEY }} defaultCenter={this.props.center} defaultZoom={this.props.zoom} >
             {this.props.properties.map(property => {
                 return (
-                    <MapProperty lat={property.latitude} lng={property.longitude}/>
+                    <MapProperty lat={property.latitude} lng={property.longitude} property={property}/>
                 )
                 
             })}

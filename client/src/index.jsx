@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Axios from 'axios';
 import Map from './map.jsx';
+import NeighborhoodInfo from './neighborhoodInfo.jsx';
 
 
 class App extends React.Component {
@@ -27,13 +28,10 @@ class App extends React.Component {
         .catch(err => console.log('error getting'))
     }
 
-
-
-
     render() {
         return (
           <div>
-              <h1>Neighborhood: Rego Park</h1>
+              <NeighborhoodInfo properties={this.state.properties}/>
               <Map properties={this.state.properties}/>
           </div>
         );
@@ -43,3 +41,4 @@ class App extends React.Component {
 
 
 ReactDOM.render(<App />, document.getElementById('app'));
+
