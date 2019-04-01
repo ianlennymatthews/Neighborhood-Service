@@ -13,7 +13,7 @@ class NeighborhoodInfo extends React.Component {
             return accumulator += value.price;
         }, 0) / this.props.properties.length;
         
-        return '$' + averagePropertyPrice;
+        return '$' + Math.round(averagePropertyPrice / 1000) + 'K';
         }
 
 
