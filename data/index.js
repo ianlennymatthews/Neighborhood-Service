@@ -1,6 +1,8 @@
 const sqlite3 = require('sqlite3').verbose();
 const data = require('./rawData');
 
+console.log('hello'); 
+
 let db = new sqlite3.Database(__dirname + '/../properties.db', (err) => {
     
     if (err) {
@@ -27,13 +29,13 @@ db.serialize(() => {
     });
 
 
-    db.prepare("CREATE TABLE regoProperties (price INTEGER NOT NULL, beds INTEGER NOT NULL, baths INTEGER NOT NULL, sqft INTEGER NOT NULL, address TEXT NOT NULL, latitude INTEGER NOT NULL, longitude INTEGER NOT NULL, uniqueId INTEGER PRIMARY KEY);")
+    db.prepare("CREATE TABLE regoProperties (price INTEGER NOT NULL, beds INTEGER NOT NULL, baths INTEGER NOT NULL, sqft INTEGER NOT NULL, address TEXT NOT NULL, latitude INTEGER NOT NULL, longitude INTEGER NOT NULL, uniqueId INTEGER PRIMARY KEY, imgUrl TEXT);")
     .run(err => {
         if (err) {
             console.log(err);
         }
     })
-    .finalize((err) =>{
+    .finalize((err) => {
         if (err) {
             console.log('error creating table');
         }
@@ -41,10 +43,10 @@ db.serialize(() => {
 
 
 
-    var stmt = db.prepare("INSERT INTO regoProperties VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+    var stmt = db.prepare("INSERT INTO regoProperties VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
 
     for (var i = 0; i < data.length; i++) {
-        stmt.run(data[i].price, data[i].beds, data[i].baths, data[i].sqft, data[i].address, data[i].latitude, data[i].longitude, data[i].uniqueId);
+        stmt.run(data[i].price, data[i].beds, data[i].baths, data[i].sqft, data[i].address, data[i].latitude, data[i].longitude, data[i].uniqueId, data[i].imgUrl);
     }
 
     stmt.finalize();

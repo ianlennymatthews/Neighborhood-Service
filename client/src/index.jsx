@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import Axios from 'axios';
 import Map from './map.jsx';
 import NeighborhoodInfo from './neighborhoodInfo.jsx';
+import NearbyHomes from './nearbyHomes.jsx';
 
 
 class App extends React.Component {
@@ -21,6 +22,7 @@ class App extends React.Component {
     }
 
     getProperties() {
+        
         Axios.get('/items')
         .then(response => this.setState({
             properties: response.data
@@ -29,12 +31,19 @@ class App extends React.Component {
     }
 
     render() {
-        return (
-          <div>
-              <NeighborhoodInfo properties={this.state.properties}/>
-              <Map properties={this.state.properties}/>
-          </div>
-        );
+        if (this.state.properties.length > 0) {
+            return (
+                <div>
+                    <NeighborhoodInfo properties={this.state.properties}/>
+                    <Map properties={this.state.properties}/>
+                    <NearbyHomes properties={this.state.properties}/>
+                </div>
+            );
+        } else {
+            return (
+                <div></div>
+            )
+        }
     }
 }
 
