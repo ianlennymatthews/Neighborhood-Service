@@ -116,7 +116,7 @@ button:hover {
 .questionMarkButton {
     display: inline-block;
     border-radius: 50%;
-    background-color: grey;
+    background-color: rgb(187, 185, 185);
     color: white;
     border: none;
     height: 18px;
@@ -233,6 +233,13 @@ border-radius: 15px;
 
 /* Nearby Homes */
 
+#nearbyHomesSectionContainer {
+    padding-bottom: 30px;
+    border-bottom-color: lightgrey;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+
 #nearbyHomesCarrouselContainer {
     height:100%;
     display: flex;
@@ -264,8 +271,9 @@ border-radius: 15px;
 .nearbyHomesPicTextOverlayPhotos {
     position: absolute;
     left: 2%;
-    top: 0%;
+    top: 2%;
     color: white;
+    font-size: 12px;
 }
 
 .nearbyHomesPicTextOverlayOnOffMarket {

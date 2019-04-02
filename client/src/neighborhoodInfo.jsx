@@ -28,7 +28,7 @@ class NeighborhoodInfo extends React.Component {
 
                     <div id="medianZestimateSection">
                         <h5 id="medianZestimateHeader">MEDIAN ZESTIMATE&nbsp;</h5> 
-                        <button className="questionMarkButton">?</button>
+                        <button className="questionMarkButton" onClick={() => alert('hello world')}>?</button>
                         <h2 id="averagePrice">{this.calculateNeighborhoodAveragePrice()}</h2>
                         <button id="zestimateArrow">{'<'}</button>
                         <h5 id="twelveMonthChange">4.3%</h5>
