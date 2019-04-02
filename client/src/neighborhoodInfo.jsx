@@ -22,22 +22,22 @@ class NeighborhoodInfo extends React.Component {
         return (
             <div>
 
-                <h2>Neighborhood: Rego Park</h2>
+                <h2 id="pageTitle">Neighborhood: Rego Park</h2>
 
                 <div id="medianZestimateAndMarketTempContainer">
 
                     <div id="medianZestimateSection">
-                        <h5 id="medianZestimateHeader">{'MEDIAN ZESTIMATE'}</h5> 
+                        <h5 id="medianZestimateHeader">MEDIAN ZESTIMATE&nbsp;</h5> 
                         <button className="questionMarkButton">?</button>
-                        <h2>{this.calculateNeighborhoodAveragePrice()}</h2>
+                        <h2 id="averagePrice">{this.calculateNeighborhoodAveragePrice()}</h2>
                         <button id="zestimateArrow">{'<'}</button>
                         <h5 id="twelveMonthChange">4.3%</h5>
-                        <p className="neighborhoodSubText">Past 12 months</p>
+                        <div className="past12MonthsText">Past 12 months</div>
                     </div>
 
                     <div id="marketTempSection">
                         <div>
-                            <h5 id="marketTempHeader">MARKET TEMP</h5>
+                            <h5 id="marketTempHeader">MARKET TEMP&nbsp;</h5>
                             <button className="questionMarkButton">?</button>
                         </div>
 
@@ -63,14 +63,16 @@ class NeighborhoodInfo extends React.Component {
 
                 <div id="neighborhoodInfoDescription">
                     <p>Zillow predicts Rego Park home values will rise 0.8% next year, compared to a 4.3% rise for New York as a whole. Among Rego Park homes, this home is valued 11.4% more than the midpoint (median) home, but is valued 68.8% less per square foot.</p>
-                    <p>
-                        <a href="https://www.google.com/">Walk Score&nbsp;</a>
-                        <a href="https://www.google.com/">90&nbsp;</a>
+                    <p id="walkerScore">
+                        <img className="scoreIcons" src="https://iconsplace.com/wp-content/uploads/_icons/0000ff/256/png/walking-icon-2-256.png"></img>
+                        <a href="https://www.google.com/">Walk Score ® &nbsp;</a>
+                        <a id="scoreNumbers" href="https://www.google.com/">90&nbsp;</a>
                         (Walker's Paradise)
                     </p>
-                    <p>
-                        <a href="https://www.google.com/">Transit Score&nbsp;</a>
-                        <a href="https://www.google.com/">94&nbsp;</a>
+                    <p id="transitScore">
+                        <img className="scoreIcons" src="https://iconsplace.com/wp-content/uploads/_icons/0000ff/256/png/bus-icon-2-256.png"></img>
+                        <a href="https://www.google.com/">Transit Score ™&nbsp;</a>
+                        <a id="scoreNumbers" href="https://www.google.com/">94&nbsp;</a>
                         (Excellent Transit)
                     </p>
                 </div>
