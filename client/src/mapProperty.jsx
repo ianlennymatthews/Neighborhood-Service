@@ -9,8 +9,8 @@ class MapProperty extends React.Component {
 
     render() {
         return (
-            <div class="propertyMarkerContainer">
-                <div class="circle"></div>
+            <div className="propertyMarkerContainer">
+                <div className="circle"></div>
                 <button className="propertyMarkerPrice">{'$' + (this.props.property.price / 1000).toFixed(0) + 'K'}</button>
             </div>
         );
