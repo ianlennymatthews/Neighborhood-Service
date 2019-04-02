@@ -1,10 +1,139 @@
-.body {
+/* body */
+
+body {
     font-family: sans-serif;
+    width: 50%;
+    margin: auto;
 }
 
 p {
     font-size: 15px;
 }
+
+
+
+
+/* Median Zestimate */
+
+#medianZestimateAndMarketTempContainer {
+    width: 100%;
+}
+
+#medianZestimateSection {
+    float: left;
+    width: 45%;
+
+    
+}
+
+#medianZestimateHeader {
+    display: inline-block;
+    
+}
+
+#zestimateArrow {
+    color: rgb(22, 187, 22);
+    background-color: white;
+    border-color: rgb(22, 187, 22);
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    transform: rotate(90deg);
+}
+
+#twelveMonthChange {
+    display: inline-block;
+}
+
+.neighborhoodSubText {
+    font-size: 12px;
+}
+
+
+
+/* Market Temp */
+
+#marketTempSection {
+    float: right;
+    width: 45%;
+    
+}
+
+#marketTempHeader {
+    display: inline-block;
+}
+
+.questionMarkButton {
+    display: inline-block;
+    border-radius: 50%;
+    background-color: grey;
+    color: white;
+    border: none;
+    height: 18px;
+    width: 18px;
+    font-size: 10px;
+    text-align: center;
+}
+
+.questionMarkButton:hover {
+    background-color: black;
+}
+
+#temperatureBarContainer {
+    position: relative;
+}
+
+#temperatureBar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background-color: lightgrey;
+    border-radius: 15px;
+}
+
+#temperature {
+position: absolute;
+top: 0;
+left: 0;
+width: 50px;
+height: 15px;
+background-color: blue;
+border-radius: 15px;
+}
+
+#buyersMarketText {
+    padding-top: 20px;
+    font-size: 12px;
+    float: left;
+}
+
+#sellersMarketText {
+    padding-top: 20px;
+    font-size: 12px;
+    float: right;
+}
+
+
+
+
+/* Neighborhood Description */
+
+#neighborhoodInfoDescription {
+    clear: both;
+    height: 200px;
+    padding-top: 20px;
+    
+}
+
+
+
+
+
+
+
+/* Map */
 
 .propertyMarkerPrice {
     background-color: black;
@@ -17,9 +146,14 @@ p {
     color: black;
 }
 
+
+
+
+/* Nearby Homes */
+
 .nearbyHomesPics {
     height: 150px;
-    width: 23%;
+    width: 43%;
     border: 2px solid white;
 }
 
@@ -28,4 +162,11 @@ p {
     width: 10px;
     background-color: red;
     border-radius: 50%;
-  }
+}
+
+
+
+
+
+
+
