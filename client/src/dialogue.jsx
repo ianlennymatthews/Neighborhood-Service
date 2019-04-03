@@ -16,7 +16,7 @@ class Dialogue extends React.Component {
     render() {
         return (
             <div className="dialogueContainer">
-                <button className="questionMarkButton" type="button" onClick={this.openDialog}>?</button>
+                <button className={this.props.buttonClass} type="button" onClick={this.openDialog}>{this.props.buttonText}</button>
                 {
                     this.state.isDialogOpen &&
                     <Dialog
@@ -34,7 +34,18 @@ class Dialogue extends React.Component {
                         <p className="dialogueMessageLine">{this.props.messageLine1}</p>
                         <p className="dialogueMessageLine">{this.props.messageLine2}</p>
                         <p className="dialogueMessageLine">{this.props.messageLine3}</p>
-                        <a className="dialogueLink" href={this.props.link}>Learn More</a>
+                        <p className="dialogueMessageLine">{this.props.messageLine4}</p>
+                        <p className="dialogueMessageLine">{this.props.messageLine5}</p>
+                        <p className="dialogueMessageLine">{this.props.messageLine6}</p>
+                        <p className="dialogueMessageLine">{this.props.messageLine7}</p>
+                        <p className="dialogueMessageLine">{this.props.messageLine8}</p>
+                        <p className="dialogueMessageLine">{this.props.messageLine9}</p>
+                        <p className="dialogueMessageLine">{this.props.messageLine10}</p>
+                        <p className="dialogueMessageLine">{this.props.messageLine11}</p>
+                        <p></p>
+                        <a className="dialogueLink" href={this.props.link1}>{this.props.linkText1}</a>
+                        <p></p>
+                        <a className="dialogueLink" href={this.props.link2}>{this.props.linkText2}</a>
                         <p></p>
                     </Dialog>
                 }

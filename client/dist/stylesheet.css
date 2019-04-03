@@ -117,6 +117,7 @@ button:hover {
 .dialogueContainer {
     display: inline-block;
     position: relative;
+    z-index: 3;
 }
 
 .ui-dialog-container {
@@ -127,7 +128,7 @@ button:hover {
     position: absolute;
     top: 100px;
     left: 275px;
-    background-color: rgb(32, 31, 31);
+    background-color: rgb(46, 44, 44);
     color: white;
     font-size: 11px;
     line-height: .5;
@@ -222,6 +223,14 @@ border-radius: 15px;
 
 #scoreNumbers {
     font-weight: bold;
+}
+
+.scoreButtons {
+    background-color: white;
+    border: none;
+    color: blue;
+    font-size: 13px;
+
 }
 
 
