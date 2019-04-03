@@ -14,10 +14,13 @@ class NearbyHomes extends React.Component {
     }
 
     slidePicsToRight() {
-        this.setState({
-            currentFirstPicture: this.state.currentFirstPicture + 2, 
-            currentSecondPicture: this.state.currentSecondPicture + 2
-        })
+        console.log(this.state)
+        if (this.state.currentSecondPicture < 99) {
+            this.setState({
+                currentFirstPicture: this.state.currentFirstPicture + 2, 
+                currentSecondPicture: this.state.currentSecondPicture + 2
+            })
+        }
     }
 
     slidePicsToLeft() {
