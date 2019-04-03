@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Dialogue from './dialogue.jsx';
 
 
 class NeighborhoodInfo extends React.Component {
@@ -28,9 +28,9 @@ class NeighborhoodInfo extends React.Component {
 
                     <div id="medianZestimateSection">
                         <h5 id="medianZestimateHeader">MEDIAN ZESTIMATE&nbsp;</h5> 
-                        <button className="questionMarkButton" onClick={() => alert('hello world')}>?</button>
+                        <Dialogue messageLine1="The median Zestimate valuation for a " messageLine2="given geographic area on a given day is " messageLine3="the Zillow Home Value Index." link="https://www.zillow.com/info/whats-the-zillow-home-value-index/"/>
                         <h2 id="averagePrice">{this.calculateNeighborhoodAveragePrice()}</h2>
-                        <button id="zestimateArrow">{'<'}</button>
+                        <img id="zestimateArrow" src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Green-Up-Arrow.svg" height="30" width="30"></img>
                         <h5 id="twelveMonthChange">4.3%</h5>
                         <div className="past12MonthsText">Past 12 months</div>
                     </div>

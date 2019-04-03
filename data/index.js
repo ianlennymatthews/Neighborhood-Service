@@ -1,8 +1,6 @@
 const sqlite3 = require('sqlite3').verbose();
 const data = require('./rawData');
 
-console.log('hello'); 
-
 let db = new sqlite3.Database(__dirname + '/../properties.db', (err) => {
     
     if (err) {
