@@ -16,6 +16,7 @@ class App extends React.Component {
         }
 
         this.getProperties = this.getProperties.bind(this);
+        this.changeCurrentProperty = this.changeCurrentProperty.bind(this);
     }
 
     componentDidMount() {
@@ -30,7 +31,17 @@ class App extends React.Component {
             currentProperty: response.data[9]
         }))
         .then(() => console.log(this.state))
-        .catch(err => console.log('error getting'))
+        .catch(err => console.log('error fetching data'))
+    }
+
+    changeCurrentProperty(propertyId) {
+        for (var i = 0; i < this.state.properties.length; i++) {
+            if (this.state.properties[i].uniqueId === propertyId) {
+                this.setState({
+                    currentProperty: this.state.properties[i]
+                })
+            }
+        }
     }
 
     render() {
@@ -38,7 +49,7 @@ class App extends React.Component {
             return (
                 <div>
                     <NeighborhoodInfo properties={this.state.properties}/>
-                    <Map properties={this.state.properties} currentProperty={this.state.currentProperty}/>
+                    <Map properties={this.state.properties} currentProperty={this.state.currentProperty} changeCurrentProperty={this.changeCurrentProperty}/>
                     <NearbyHomes properties={this.state.properties}/>
                 </div>
             );

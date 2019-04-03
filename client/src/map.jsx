@@ -20,12 +20,11 @@ class Map extends React.Component {
         return (
           // Important! Always set the container height explicitly
           <div style={{ height: '50vh', width: '100%' }}>
-            <GoogleMapReact bootstrapURLKeys={{ key: config.GOOGLE_API_KEY }} defaultCenter={this.center} defaultZoom={this.zoom} >
+            <GoogleMapReact bootstrapURLKeys={{ key: config.GOOGLE_API_KEY }} defaultCenter={this.center} center={{lat: this.props.currentProperty.latitude, lng: this.props.currentProperty.longitude}} defaultZoom={this.zoom} >
             {this.props.properties.map(property => {
                 return (
-                    <MapProperty lat={property.latitude} lng={property.longitude} property={property} currentProperty={this.props.currentProperty}/>
+                    <MapProperty lat={property.latitude} lng={property.longitude} property={property} currentProperty={this.props.currentProperty} changeCurrentProperty={this.props.changeCurrentProperty}/>
                 )
-                
             })}
             
             </GoogleMapReact>
