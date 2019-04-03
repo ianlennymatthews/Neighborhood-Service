@@ -42,7 +42,7 @@ class NeighborhoodInfo extends React.Component {
                         </div>
 
                         <div>
-                            <h2>Cool</h2>
+                            <h2>Very Hot</h2>
                         </div>
 
                         <div id="temperatureBarContainer">
