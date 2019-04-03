@@ -11,7 +11,8 @@ class App extends React.Component {
         super(props);
 
         this.state = {
-            properties: []
+            properties: [],
+            currentProperty: undefined
         }
 
         this.getProperties = this.getProperties.bind(this);
@@ -25,8 +26,10 @@ class App extends React.Component {
         
         Axios.get('/items')
         .then(response => this.setState({
-            properties: response.data
+            properties: response.data,
+            currentProperty: response.data[9]
         }))
+        .then(() => console.log(this.state))
         .catch(err => console.log('error getting'))
     }
 
@@ -35,7 +38,7 @@ class App extends React.Component {
             return (
                 <div>
                     <NeighborhoodInfo properties={this.state.properties}/>
-                    <Map properties={this.state.properties}/>
+                    <Map properties={this.state.properties} currentProperty={this.state.currentProperty}/>
                     <NearbyHomes properties={this.state.properties}/>
                 </div>
             );
