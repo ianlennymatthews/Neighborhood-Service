@@ -6,7 +6,7 @@ import NeighborhoodInfo from './neighborhoodInfo.jsx';
 import NearbyHomes from './nearbyHomes.jsx';
 
 
-class App extends React.Component {
+class NeighborhoodSection extends React.Component {
     constructor(props) {
         super(props);
 
@@ -25,7 +25,7 @@ class App extends React.Component {
 
     getProperties() {
         
-        Axios.get('/items')
+        Axios.get('http://localhost:3007/items')
         .then(response => this.setState({
             properties: response.data,
             currentProperty: response.data[9]
@@ -63,5 +63,5 @@ class App extends React.Component {
 
 
 
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(<NeighborhoodSection />, document.getElementById('Neighborhood'));
 
