@@ -4,20 +4,23 @@ var app = express();
 var axios = require('axios');
 const Models = require('./Models.js');
 const cors = require('cors');
+const path = require('path');
+const port = process.env.PORT || 3007;
 
 app.use(bodyParser.json());
 app.use(cors());
-app.use(express.static(__dirname + '/../client/dist'));
+app.use(express.static(path.join(__dirname, '/../client/dist')));
 
 app.get('/items', (req, res) => {
     Models.retrieveAll(req, res);
 })
 
 app.get('/items/:id', (req, res) => {
+    console.log(req.params);
     Models.retrieveOne(req, res);
 })
 
 
-app.listen(3007, function() {
-    console.log('listening on port 3007!');
+app.listen(port, () => {
+  console.log(`server running at: http://localhost:${port}`);
 });

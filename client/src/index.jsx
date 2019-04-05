@@ -25,7 +25,7 @@ class NeighborhoodSection extends React.Component {
 
     getProperties() {
         
-        Axios.get('http://localhost:3007/items')
+        Axios.get('/items')
         .then(response => this.setState({
             properties: response.data,
             currentProperty: response.data[9]
