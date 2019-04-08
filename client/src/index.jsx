@@ -30,7 +30,6 @@ class NeighborhoodSection extends React.Component {
             properties: response.data,
             currentProperty: response.data[9]
         }))
-        .then(() => console.log(this.state))
         .catch(err => console.log('error fetching data'))
     }
 
