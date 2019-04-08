@@ -28,7 +28,7 @@ class NeighborhoodSection extends React.Component {
         Axios.get('/items')
         .then(response => this.setState({
             properties: response.data,
-            currentProperty: response.data[window.location.href.substring(21)]
+            currentProperty: response.data[window.location.href.substring(21)] || response.data[0]
         }))
         .catch(err => console.log('error fetching data'))
     }
