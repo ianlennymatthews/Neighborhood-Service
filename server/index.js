@@ -12,11 +12,11 @@ app.use(cors());
 app.use(express.static(path.join(__dirname, '/../client/dist')));
 
 app.get('/items', (req, res) => {
+    console.log('/items request went to service server')
     Models.retrieveAll(req, res);
 })
 
 app.get('/items/:id', (req, res) => {
-    console.log(req.params);
     Models.retrieveOne(req, res);
 })
 
