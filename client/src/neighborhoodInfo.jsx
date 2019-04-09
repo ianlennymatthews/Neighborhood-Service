@@ -66,13 +66,13 @@ class NeighborhoodInfo extends React.Component {
                     <p id="walkerScore">
                         <img className="scoreIcons" src="https://iconsplace.com/wp-content/uploads/_icons/0000ff/256/png/walking-icon-2-256.png"></img>
                         <Dialogue buttonClass="scoreButtons" buttonText="Walk Score ® &nbsp;" linkText1="Learn More" linkText2="See detailed Walk Score rating" messageLine1="WHAT IS A WALK SCORE?" messageLine2="&nbsp;" messageLine3="Walk Score measures how walkable an " messageLine4="address is based on the distance to " messageLine5="nearby amenities."  link1="https://www.walkscore.com/how-it-works/" link2={`https://www.walkscore.com/score/loc/lat=40.743574/lng=-73.889705/?utm_source=zillow2.com&utm_medium=ws_api&utm_campaign=ws_api`}/>
-                        <a id="scoreNumbers" href={`https://www.walkscore.com/score/loc/lat=40.743574/lng=-73.889705/?utm_source=zillow2.com&utm_medium=ws_api&utm_campaign=ws_api`}>90&nbsp;</a>
+                        <a id="scoreNumbers" href={`https://www.walkscore.com/score/loc/lat=${this.props.currentProperty.latitude}/lng=${this.props.currentProperty.longitude}/?utm_source=zillow2.com&utm_medium=ws_api&utm_campaign=ws_api`}>{this.props.currentProperty.walkScore}&nbsp;</a>
                         (Walker's Paradise)
                     </p>
                     <p id="transitScore">
                         <img className="scoreIcons" src="https://iconsplace.com/wp-content/uploads/_icons/0000ff/256/png/bus-icon-2-256.png"></img>
                         <Dialogue buttonClass="scoreButtons" buttonText="Transit Score ™&nbsp;" linkText1="Learn how it works" linkText2="See detailed Transit Score rating" messageLine1="WHAT IS A TRANSIT SCORE?" messageLine2="&nbsp;" messageLine3="Transit Score measures how well a " messageLine4="location is served by public " messageLine5="transportation."  link1="http://www.walkscore.com/transit-score.php" link2={`https://www.walkscore.com/score/loc/lat=40.7436/lng=-73.8897/?utm_source=zillow2.com&utm_medium=ts_api&utm_campaign=ts_api`}/>
-                        <a id="scoreNumbers" href={`https://www.walkscore.com/score/loc/lat=40.7436/lng=-73.8897/?utm_source=zillow2.com&utm_medium=ts_api&utm_campaign=ts_api`}>94&nbsp;</a>
+                        <a id="scoreNumbers" href={`https://www.walkscore.com/score/loc/lat=${this.props.currentProperty.latitude}/lng=${this.props.currentProperty.longitude}/?utm_source=zillow2.com&utm_medium=ts_api&utm_campaign=ts_api`}>{this.props.currentProperty.transitScore}&nbsp;</a>
                         (Excellent Transit)
                     </p>
                 </div>

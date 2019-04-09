@@ -1018,8 +1018,16 @@ var addImageUrls = () => {
     }
 }
 
+var addWalkAndTransitScores = () => {
+    for (var i = 0; i < rawData.length; i++) {
+        rawData[i].walkScore = 90 + Math.round(Math.random() * 8);
+        rawData[i].transitScore = 90 + Math.round(Math.random() * 8);
+    }
+}
+
 addUniqueId();
 addImageUrls();
+addWalkAndTransitScores();
 
 module.exports = rawData;
 

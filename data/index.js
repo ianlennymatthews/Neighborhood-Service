@@ -27,7 +27,7 @@ db.serialize(() => {
     });
 
 
-    db.prepare("CREATE TABLE regoProperties (price INTEGER NOT NULL, beds INTEGER NOT NULL, baths INTEGER NOT NULL, sqft INTEGER NOT NULL, address TEXT NOT NULL, latitude INTEGER NOT NULL, longitude INTEGER NOT NULL, uniqueId INTEGER PRIMARY KEY, imgUrl TEXT);")
+    db.prepare("CREATE TABLE regoProperties (price INTEGER NOT NULL, beds INTEGER NOT NULL, baths INTEGER NOT NULL, sqft INTEGER NOT NULL, address TEXT NOT NULL, latitude INTEGER NOT NULL, longitude INTEGER NOT NULL, uniqueId INTEGER PRIMARY KEY, imgUrl TEXT, walkScore INTEGER NOT NULL, transitScore INTEGER NOT NULL);")
     .run(err => {
         if (err) {
             console.log(err);
@@ -41,10 +41,10 @@ db.serialize(() => {
 
 
 
-    var stmt = db.prepare("INSERT INTO regoProperties VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
+    var stmt = db.prepare("INSERT INTO regoProperties VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 
     for (var i = 0; i < data.length; i++) {
-        stmt.run(data[i].price, data[i].beds, data[i].baths, data[i].sqft, data[i].address, data[i].latitude, data[i].longitude, data[i].uniqueId, data[i].imgUrl);
+        stmt.run(data[i].price, data[i].beds, data[i].baths, data[i].sqft, data[i].address, data[i].latitude, data[i].longitude, data[i].uniqueId, data[i].imgUrl, data[i].walkScore, data[i].transitScore);
     }
 
     stmt.finalize();
