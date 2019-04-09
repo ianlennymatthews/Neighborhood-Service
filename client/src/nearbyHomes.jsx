@@ -6,16 +6,15 @@ class NearbyHomes extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            currentFirstPicture: 0,
-            currentSecondPicture: 1,
+            currentFirstPicture: Math.round(Math.random() * 100),
+            currentSecondPicture: Math.round(Math.random() * 100),
         }
         this.slidePicsToRight = this.slidePicsToRight.bind(this);
         this.slidePicsToLeft = this.slidePicsToLeft.bind(this);
     }
 
     slidePicsToRight() {
-        console.log(this.state)
-        if (this.state.currentSecondPicture < 99) {
+        if (this.state.currentSecondPicture < 95 && this.state.currentFirstPicture < 95) {
             this.setState({
                 currentFirstPicture: this.state.currentFirstPicture + 2, 
                 currentSecondPicture: this.state.currentSecondPicture + 2
@@ -24,7 +23,7 @@ class NearbyHomes extends React.Component {
     }
 
     slidePicsToLeft() {
-        if (this.state.currentFirstPicture > 0) {
+        if (this.state.currentFirstPicture > 5 && this.state.currentSecondPicture > 5) {
             this.setState({
                 currentFirstPicture: this.state.currentFirstPicture - 2, 
                 currentSecondPicture: this.state.currentSecondPicture - 2
@@ -40,7 +39,7 @@ class NearbyHomes extends React.Component {
                     <button className="nearbyHomesPicsScroll" onClick={this.slidePicsToLeft}>{'<'}</button>
                     
                     <div className="nearbyHomesPicContainer">
-                        <img className="nearbyHomesPic" src={this.props.properties[this.state.currentFirstPicture].imgUrl}></img>
+                        <img className="nearbyHomesPic" onClick={() => window.location.href = `http://localhost:3000/${this.state.currentFirstPicture}`} src={this.props.properties[this.state.currentFirstPicture].imgUrl}></img>
                         <div className="nearbyHomesPicTextOverlayPhotos">{Math.round(Math.random()*10 + 2) + ' photos'}</div>
                         <div className="nearbyHomesPicTextOverlayOnOffMarket">On Market</div>
                         <div className="nearbyHomesPicTextOverlayPrice">{'$' + Math.round(this.props.properties[this.state.currentFirstPicture].price/1000) + 'K'}</div>
@@ -49,7 +48,7 @@ class NearbyHomes extends React.Component {
                     </div>
 
                     <div className="nearbyHomesPicContainer">
-                        <img className="nearbyHomesPic" src={this.props.properties[this.state.currentSecondPicture].imgUrl}></img>
+                        <img className="nearbyHomesPic" onClick={() => window.location.href = `http://localhost:3000/${this.state.currentSecondPicture}`} src={this.props.properties[this.state.currentSecondPicture].imgUrl}></img>
                         <div className="nearbyHomesPicTextOverlayPhotos">{Math.round(Math.random()*10 + 2) + ' photos'}</div>
                         <div className="nearbyHomesPicTextOverlayOnOffMarket">On Market</div>
                         <div className="nearbyHomesPicTextOverlayPrice">{'$' + Math.round(this.props.properties[this.state.currentSecondPicture].price/1000) + 'K'}</div>
