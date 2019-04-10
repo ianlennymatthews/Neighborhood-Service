@@ -39,7 +39,7 @@ class NearbyHomes extends React.Component {
                     <button className="nearbyHomesPicsScroll" onClick={this.slidePicsToLeft}>{'<'}</button>
                     
                     <div className="nearbyHomesPicContainer">
-                        <img className="nearbyHomesPic" onClick={() => window.location.href = `http://34.239.102.50/${this.state.currentFirstPicture}`} src={this.props.properties[this.state.currentFirstPicture].imgUrl}></img>
+                        <img className="nearbyHomesPic" onClick={() => window.location.href = `${document.location.href.substring(0, 21)}/${this.state.currentFirstPicture}`} src={this.props.properties[this.state.currentFirstPicture].imgUrl}></img>
                         <div className="nearbyHomesPicTextOverlayPhotos">{Math.round(Math.random()*10 + 2) + ' photos'}</div>
                         <div className="nearbyHomesPicTextOverlayOnOffMarket">On Market</div>
                         <div className="nearbyHomesPicTextOverlayPrice">{'$' + Math.round(this.props.properties[this.state.currentFirstPicture].price/1000) + 'K'}</div>
@@ -48,7 +48,7 @@ class NearbyHomes extends React.Component {
                     </div>
 
                     <div className="nearbyHomesPicContainer">
-                        <img className="nearbyHomesPic" onClick={() => window.location.href = `http://34.239.102.50/${this.state.currentSecondPicture}`} src={this.props.properties[this.state.currentSecondPicture].imgUrl}></img>
+                        <img className="nearbyHomesPic" onClick={() => window.location.href = `${document.location.href.substring(0, 21)}/${this.state.currentSecondPicture}`} src={this.props.properties[this.state.currentSecondPicture].imgUrl}></img>
                         <div className="nearbyHomesPicTextOverlayPhotos">{Math.round(Math.random()*10 + 2) + ' photos'}</div>
                         <div className="nearbyHomesPicTextOverlayOnOffMarket">On Market</div>
                         <div className="nearbyHomesPicTextOverlayPrice">{'$' + Math.round(this.props.properties[this.state.currentSecondPicture].price/1000) + 'K'}</div>
