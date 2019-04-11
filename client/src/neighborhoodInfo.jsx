@@ -21,7 +21,7 @@ class NeighborhoodInfo extends React.Component {
     render() {
         return (
             <div>
-
+                
                 <h2 id="pageTitle">Neighborhood: Rego Park</h2>
 
                 <div id="medianZestimateAndMarketTempContainer">
