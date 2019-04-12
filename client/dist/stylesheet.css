@@ -53,6 +53,7 @@ button:hover {
     border-top-color: lightgrey;
     border-top-style: solid;
     border-top-width: 1px;
+    margin-bottom: 20px;
 
 }
 
@@ -138,7 +139,7 @@ button:hover {
     background-color: rgb(46, 44, 44);
     color: white;
     font-size: 11px;
-    line-height: .5;
+    line-height: 1.5;
     border-radius: 5px;
     width: 270px;
     opacity: .95;
