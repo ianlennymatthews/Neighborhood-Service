@@ -1,7 +1,12 @@
 /* generic body */
 
+/* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
 #Neighborhood {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     width: 50%;
     margin: auto;
 }
