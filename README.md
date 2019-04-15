@@ -8,6 +8,7 @@ Implementation of Zillow's property public view "Neighborhood" section. Consists
 
 3) Nearby Homes - A photo carrousel of nearby homes with property information overlayed on each photo
 
+markup: https://gfycat.com/vastfastdrever
 
 
 Related Projects:
