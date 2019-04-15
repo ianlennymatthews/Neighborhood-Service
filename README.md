@@ -14,9 +14,12 @@ Implementation of Zillow's property public view "Neighborhood" section. Consists
 
 # Major Technologies Used: #
 
-Client - React, Webpack ↩
-Server - Node.js, Express ↩
-Database - SQLite3
+### Client ###
+React, Webpack
+### Server ###
+Node.js, Express
+### Database ###
+SQLite3
 
 
 
