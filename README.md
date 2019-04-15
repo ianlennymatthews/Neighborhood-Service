@@ -6,7 +6,7 @@ Implementation of Zillow's property public view "Neighborhood" section. Consists
 
 2) Neighborhood Map - An interactive Google Map with markers rendered for properties in the neighborhood
 
-3) Nearby Homes - A photo carrousel of nearby homes with property information overlayed on each photo
+3) Nearby Homes - A photo carrousel of nearby homes with property information overlayed on each photo ↩
 
 ![](https://media.giphy.com/media/iI9jtttDLJbQiCTOpL/giphy.gif)
 
@@ -26,7 +26,7 @@ Database - SQLite3
     npm run proxy-server-dev
 
 ### Within the 'Neighborhood-Service' folder ###
-    npm run server-dev ↩
+    npm run server-dev
     npm run react-dev
 
 Navigate browser to http://localhost:3000/:id
@@ -34,7 +34,7 @@ Navigate browser to http://localhost:3000/:id
 
 
 
-# Performance Optimzations #
+# Performance Optimizations #
 <!-- GZIP TEXT COMPRESSION -->
 
 
