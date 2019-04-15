@@ -30,7 +30,6 @@ SQLite3
 
 ### Within the 'Neighborhood-Service' folder ###
     npm run server-dev
-    npm run react-dev
 
 Navigate browser to http://localhost:3000/:id
 
