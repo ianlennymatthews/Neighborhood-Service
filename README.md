@@ -1,4 +1,4 @@
-Project Overview:
+# Project Overview: #
 
 Implementation of Zillow's property public view "Neighborhood" section. Consists of three distinct sections:
 
@@ -11,17 +11,11 @@ Implementation of Zillow's property public view "Neighborhood" section. Consists
 ![](https://media.giphy.com/media/iI9jtttDLJbQiCTOpL/giphy.gif)
 
 
-Related Projects:
 
-Photo carrousel - 
+Major Technologies Used:
 
-Mortgage calculator - 
-
-
-Dependencies:
-
-Client - React, 
-Server - Express, Node
+Client - React, Webpack
+Server - Node.js, Express
 Database - SQLite3
 
 
