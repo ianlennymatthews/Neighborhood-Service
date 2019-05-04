@@ -33,6 +33,7 @@ Clone down Neighborhood-Proxy and Neighborhood-Service to your local machine.
 
 ### Within the root directory of the 'Neighborhood-Service' repo ###
     npm install
+    npm run seedDatabase
     npm run start
 
 Navigate browser to http://localhost:3000/:id (:id = any number between 1 and 100)
