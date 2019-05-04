@@ -25,10 +25,12 @@ SQLite3
 
 # Getting Started: #
 
-### Within the 'Neighborhood-Proxy' folder ###
+Clone down Neighborhood-Proxy and Neighborhood-Service to your local machine.
+
+### Within the root directory of the 'Neighborhood-Proxy' repo ###
     npm run proxy-server-dev
 
-### Within the 'Neighborhood-Service' folder ###
+### Within the root directory of the 'Neighborhood-Service' repo ###
     npm run server-dev
 
 Navigate browser to http://localhost:3000/:id
