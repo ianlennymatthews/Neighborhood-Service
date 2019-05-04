@@ -29,18 +29,23 @@ Clone down Neighborhood-Proxy and Neighborhood-Service to your local machine.
 
 ### Within the root directory of the 'Neighborhood-Proxy' repo ###
     npm install
-    npm run proxy-server-dev
+    npm run start
 
 ### Within the root directory of the 'Neighborhood-Service' repo ###
     npm install
-    npm run server-dev
+    npm run start
 
-Navigate browser to http://localhost:3000/:id
-
-
+Navigate browser to http://localhost:3000/:id (:id = any number between 1 and 100)
 
 
-# Performance Optimizations #
+Note: to view the interactive Google Maps Plugin, create a file named "config.js" within the root directory of "Neighborhood-Service" and insert your Google API Key under the variable "GOOGLE_API_KEY". Insert this line as the final line of the file:
+
+module.exports.GOOGLE_API_KEY = GOOGLE_API_KEY;
+
+
+
+
+<!-- # Performance Optimizations # -->
 <!-- GZIP TEXT COMPRESSION -->
 
 
