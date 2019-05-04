@@ -1,4 +1,4 @@
-Project Overview:
+# Project Overview: #
 
 Implementation of Zillow's property public view "Neighborhood" section. Consists of three distinct sections:
 
@@ -6,40 +6,46 @@ Implementation of Zillow's property public view "Neighborhood" section. Consists
 
 2) Neighborhood Map - An interactive Google Map with markers rendered for properties in the neighborhood
 
-3) Nearby Homes - A photo carrousel of nearby homes with property information overlayed on each photo
+3) Nearby Homes - A photo carrousel of nearby homes with property information overlayed on each photo ↩
+
+![](https://media.giphy.com/media/iI9jtttDLJbQiCTOpL/giphy.gif)
 
 
 
-Related Projects:
+# Major Technologies Used: #
 
-Photo carrousel - 
-
-Mortgage calculator - 
-
-
-Dependencies:
-
-Client - React, 
-Server - Express, Node
-Database - SQLite3
+### Client ###
+React, Webpack
+### Server ###
+Node.js, Express
+### Database ###
+SQLite3
 
 
 
-Getting Started:
+# Getting Started: #
 
-Within the 'Neighborhood-Proxy' folder
-    npm run proxy-server-dev
+Clone down Neighborhood-Proxy and Neighborhood-Service to your local machine.
 
-Within the 'Neighborhood-Service' folder
-    npm run server-dev
-    npm run react-dev
+### Within the root directory of the 'Neighborhood-Proxy' repo ###
+    npm install
+    npm run start
 
-Navigate browser to http://localhost:3000/:id
+### Within the root directory of the 'Neighborhood-Service' repo ###
+    npm install
+    npm run start
+
+Navigate browser to http://localhost:3000/:id (:id = any number between 1 and 100)
+
+
+Note: to view the interactive Google Maps Plugin, create a file named "config.js" within the root directory of "Neighborhood-Service" and insert your Google API Key under the variable "GOOGLE_API_KEY". Insert this line as the final line of the file:
+
+module.exports.GOOGLE_API_KEY = GOOGLE_API_KEY;
 
 
 
 
-Performance Optimzations
+<!-- # Performance Optimizations # -->
 <!-- GZIP TEXT COMPRESSION -->
 
 
