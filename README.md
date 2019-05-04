@@ -27,13 +27,14 @@ SQLite3
 
 Clone down Neighborhood-Proxy and Neighborhood-Service to your local machine.
 
-### Within the root directory of the 'Neighborhood-Proxy' repo ###
+### Within the root directory of the 'Neighborhood-Proxy' repo, run the following commands: ###
     npm install
     npm run start
 
-### Within the root directory of the 'Neighborhood-Service' repo ###
+### Within the root directory of the 'Neighborhood-Service' repo, run the following commands: ###
     npm install
     npm run seedDatabase
+    npm run build
     npm run start
 
 Navigate browser to http://localhost:3000/:id (:id = any number between 1 and 100)
