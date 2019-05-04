@@ -1,7 +1,6 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
-var axios = require('axios');
 const Models = require('./Models.js');
 const cors = require('cors');
 const path = require('path');
