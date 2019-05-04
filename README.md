@@ -1,6 +1,6 @@
 # Project Overview: #
 
-Implementation of Zillow's property public view "Neighborhood" section. Consists of three distinct sections:
+Neighborhood is an implementation of Zillow's property view "Neighborhood" section from scratch. The app consists of three distinct sections:
 
 1) Neighborhood Information - an informational section with the market statistics, estimates and general information
 
@@ -33,6 +33,7 @@ Clone down Neighborhood-Proxy and Neighborhood-Service to your local machine.
 
 ### Within the root directory of the 'Neighborhood-Service' repo ###
     npm install
+    npm run seedDatabase
     npm run start
 
 Navigate browser to http://localhost:3000/:id (:id = any number between 1 and 100)
