@@ -28,9 +28,11 @@ SQLite3
 Clone down Neighborhood-Proxy and Neighborhood-Service to your local machine.
 
 ### Within the root directory of the 'Neighborhood-Proxy' repo ###
+    npm install
     npm run proxy-server-dev
 
 ### Within the root directory of the 'Neighborhood-Service' repo ###
+    npm install
     npm run server-dev
 
 Navigate browser to http://localhost:3000/:id
