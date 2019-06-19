@@ -1,13 +1,3 @@
 node_modules
 config.js
 client/dist/bundle.js
-PostgresDB/neighborhoodData1.csv
-PostgresDB/neighborhoodData2.csv
-PostgresDB/neighborhoodData3.csv
-PostgresDB/neighborhoodData4.csv
-PostgresDB/neighborhoodData5.csv
-PostgresDB/neighborhoodData6.csv
-PostgresDB/neighborhoodData7.csv
-PostgresDB/neighborhoodData8.csv
-PostgresDB/neighborhoodData9.csv
-PostgresDB/neighborhoodData10.csv
