@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 mongoose
-  .connect('mongodb://localhost/neighborhoods', {
+  .connect('mongodb://3.17.70.5:27017/neighborhoods', {
     useNewUrlParser: true
   })
   .then(() => {
