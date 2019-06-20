@@ -31,11 +31,11 @@ let cacheMiddleware = duration => {
   };
 };
 
-app.get('/items', (req, res) => {
+app.get('/items', cacheMiddleware(30), (req, res) => {
   Models.retrieveAll(req, res);
 });
 
-app.get('/items/:id', (req, res) => {
+app.get('/items/:id', cacheMiddleware(30), (req, res) => {
   Models.retrieveOne(req, res);
 });
 
