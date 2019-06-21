@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 mongoose
-  .connect('mongodb://3.17.70.5:27017/neighborhoods', {
+  .connect('mongodb://18.224.228.169/neighborhoods', {
     useNewUrlParser: true
   })
   .then(() => {
@@ -24,5 +24,8 @@ let neighborhoodSchema = new mongoose.Schema({
 });
 
 let Neighborhood = mongoose.model('Neighborhood', neighborhoodSchema);
+
+module.exports.Neighborhood = Neighborhood;
+module.exports.db = db;
 
 // mongoimport --db neighborhoods --collection neighborhoods --type csv --headerline --file ./neighborhoodData3.csv
