@@ -1,55 +1,69 @@
-# Project Overview: #
+# Project Overview:
 
-Neighborhood is an implementation of Zillow's property view "Neighborhood" section from scratch. The app consists of three distinct sections:
+_Neighborhood_ is an implementation of Zillow's property view "Neighborhood" section from scratch. This project is an evolution of a [legacy commentary system](https://github.com/hack-reactor-front-end-abrm/Neighborhood-Service) that sought to replicate Zillow's Neighborhood component.
 
-1) Neighborhood Information - an informational section with the market statistics, estimates and general information
+This application builds on the legacy project by introducing a number of improvements:
 
-2) Neighborhood Map - An interactive Google Map with markers rendered for properties in the neighborhood
+- 🚀 Transition from `SQLite` to a more robust and scalable `MongoDB` database
+- 👍 Server and client enhancements to handle extreme bursts in concurrent requests
+  - Completely revamped client-side code that behaves well when positioned behind a load balancer such as `Nginx`
+  - Implementation of an in-memory cache using the memory-cache node module
 
-3) Nearby Homes - A photo carrousel of nearby homes with property information overlayed on each photo ↩
+## Table of Contents
 
-![](https://media.giphy.com/media/iI9jtttDLJbQiCTOpL/giphy.gif)
+1. [Overview](#overview)
+1. [Requirements](#requirements)
+1. [Usage](#usage)
+1. [Environment Variables](#environment%20variables)
 
+## Overview
 
+#### Client Interface:
 
-# Major Technologies Used: #
+![interface](https://media.giphy.com/media/iI9jtttDLJbQiCTOpL/giphy.gif)
 
-### Client ###
-React, Webpack
-### Server ###
-Node.js, Express
-### Database ###
-SQLite3
+#### Stress tests:
 
+- Database server hosted on a single EC2 t2.micro
+  - 10 million `neighborhood` records
+- Node.js component server hosted on 3 EC2 t2.micros load balanced with Nginx
 
+1.  Each request is a `GET` request for a random API endpoint (a neighborhoods with `id` between `1` and `10,000,000`)
 
-# Getting Started: #
+##### 3000 Requests Per Second Over 1 minute Seconds (3% Error Rate)
 
-Clone down Neighborhood-Proxy and Neighborhood-Service to your local machine.
+![Screenshot to be Added!]()
 
-### Within the root directory of the 'Neighborhood-Proxy' repo, run the following commands: ###
-    npm install
-    npm run start
+2. Making a get request to a single api endpoint that represents a neighborhood with a single `id`
 
-### Within the root directory of the 'Neighborhood-Service' repo, run the following commands: ###
-    npm install
-    npm run seedDatabase
-    npm run build
-    npm run start
+##### 4000 Requests Per Second Over 1 minute Seconds (7.04% Error Rate)
 
-Navigate browser to http://localhost:3000/:id (:id = any number between 1 and 100)
+![4000](https://i.imgur.com/0xJFbbH.png)
 
+## Requirements
 
-Note: to view the interactive Google Maps Plugin, create a file named "config.js" within the root directory of "Neighborhood-Service" and insert your Google API Key under the variable "GOOGLE_API_KEY". Insert this line as the final line of the file:
+- Node v10.13.0 (LTS as of May 2019) or higher
+- MongoDB for the database server
 
-module.exports.GOOGLE_API_KEY = GOOGLE_API_KEY;
+## Usage
 
+#### Server
 
+> 1. Install dependencies with `npm install`
+> 2. After connecting to the database, from the root directory run `npm run seedDatabase`
+> 3. The main server file is `server/server.js`
+>    -- If nodemon is already installed globally (it is not part of the dependencies), you may start the server via `npm run server-dev` for development purposes or `npm start` for production
+>    -- The server uses port 3009 by default, but you may set it using an environment variable `process.env.PORT`
 
+#### Client
 
-<!-- # Performance Optimizations # -->
-<!-- GZIP TEXT COMPRESSION -->
+> The client side is built using Webpack:
+>
+> > `npm run dev`: Builds the client-side files in development mode and does not do full bundling. This also activates watch mode by default so it rebuilds whenever you make and save changes
+>
+> > `npm run build`: Builds the client-side files in production mode, with full bundling. This reduces file size, but is less useful in debugging (some errors do not provide as much detail as in development mod
 
+- [Slide deck of more results found here!](https://docs.google.com/presentation/d/1JHsnxxnmMg-SkkeLKGPDCdFcSh4QanGKgs95p-WkBeA/edit?usp=sharing)
 
 
 
