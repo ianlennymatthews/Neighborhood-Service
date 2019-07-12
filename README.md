@@ -14,7 +14,6 @@ This application builds on the legacy project by introducing a number of improve
 1. [Overview](#overview)
 1. [Requirements](#requirements)
 1. [Usage](#usage)
-1. [Environment Variables](#environment%20variables)
 
 ## Overview
 
