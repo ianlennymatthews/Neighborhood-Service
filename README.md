@@ -29,13 +29,13 @@ This application builds on the legacy project by introducing a number of improve
 
 1.  Each request is a `GET` request for a random API endpoint (a neighborhoods with `id` between `1` and `10,000,000`)
 
-##### 3000 Requests Per Second Over 1 minute Seconds (3% Error Rate)
+##### 3000 Requests Per Second Over 1 minute (3% Error Rate)
 
 ![Screenshot to be Added!]()
 
 2. Making a get request to a single api endpoint that represents a neighborhood with a single `id`
 
-##### 4000 Requests Per Second Over 1 minute Seconds (7.04% Error Rate)
+##### 4000 Requests Per Second Over 1 minute (7.04% Error Rate)
 
 ![4000](https://i.imgur.com/0xJFbbH.png)
 
