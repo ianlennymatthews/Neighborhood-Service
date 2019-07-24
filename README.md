@@ -5,7 +5,7 @@ _Neighborhood_ is an implementation of Zillow's property view "Neighborhood" sec
 This application builds on the legacy project by introducing a number of improvements:
 
 - 🚀 Transition from `SQLite` to a more robust and scalable `MongoDB` database
-- 👍 Server and client enhancements to handle extreme bursts in concurrent requests
+- 👍 Server and client enhancements to handle extreme bursts of concurrent requests
   - Completely revamped client-side code that behaves well when positioned behind a load balancer such as `Nginx`
   - Implementation of an in-memory cache using the memory-cache node module
 
