@@ -1,6 +1,6 @@
 # Project Overview:
 
-_Neighborhood_ is an implementation of Zillow's property view "Neighborhood" section from scratch. This project is an evolution of a [legacy commentary system](https://github.com/hack-reactor-front-end-abrm/Neighborhood-Service) that sought to replicate Zillow's Neighborhood component.
+_Neighborhood_ is an implementation of Zillow's property view "Neighborhood" section from scratch. This project is an evolution of a [legacy system](https://github.com/hack-reactor-front-end-abrm/Neighborhood-Service) that sought to replicate Zillow's Neighborhood component.
 
 This application builds on the legacy project by introducing a number of improvements:
 
